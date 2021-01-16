@@ -9,6 +9,7 @@ data class Movie(
     val releaseDate: Date
 )
 
+// View States
 enum class StateEvent {
     LOADING,
     ERROR,

@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         observeLiveData()
     }
 
+    // Observe all live datas
     private fun observeLiveData() {
         with(viewModel) {
             getStateEventLiveDate().observe(this@MainActivity, { viewStatus ->

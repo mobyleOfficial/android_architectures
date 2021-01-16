@@ -31,6 +31,8 @@ class MovieListViewModel : ViewModel() {
         )
     }
 
+    // Because there's no error here, I'll not call
+    // any of error methods
     private fun getMovieList() {
         moviesLiveData.postValue(movieList)
         stateEventLiveDate.postValue(StateEvent.SUCCESS)
