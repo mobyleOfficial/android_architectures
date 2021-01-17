@@ -3,7 +3,7 @@ package com.example.androidarchitecture
 import android.os.Handler
 import java.util.Calendar
 
-class MoviesPresenter(private val moviesView: MoviesView) {
+class MovieListPresenterImpl(private val movieListView: MovieListView) : MovieListPresenter {
     private val movieList = listOf(
         Movie("Fight Clube", 1, Calendar.getInstance().time),
         Movie("Paprika", 2, Calendar.getInstance().time),
@@ -13,7 +13,7 @@ class MoviesPresenter(private val moviesView: MoviesView) {
     )
 
     init {
-        moviesView.displayLoading()
+        movieListView.displayLoading()
 
         Handler().postDelayed(
             {
@@ -25,8 +25,8 @@ class MoviesPresenter(private val moviesView: MoviesView) {
 
     // Because there's no error here, I'll not call
     // any of error methods
-    private fun getMovieList() {
-        moviesView.displayMovieList(movieList)
-        moviesView.dismissLoading()
+    override fun getMovieList() {
+        movieListView.displayMovieList(movieList)
+        movieListView.dismissLoading()
     }
 }

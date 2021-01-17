@@ -1,6 +1,6 @@
 package com.example.androidarchitecture
 
-interface MoviesView {
+interface MovieListView {
     fun displayMovieList(movieList: List<Movie>)
     fun displayLoading()
     fun dismissLoading()
