@@ -1,12 +1,11 @@
 package com.example.androidarchitecture
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidarchitecture.databinding.MovieListItemBinding
 
-class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
+class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.ViewHolder>() {
     private var movieList: List<Movie> = emptyList()
 
     fun setData(movieList: List<Movie>) {
@@ -19,7 +18,7 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: MoviesAdapter.ViewHolder, position: Int) = holder.bind(movieList[position])
+    override fun onBindViewHolder(holder: MovieListAdapter.ViewHolder, position: Int) = holder.bind(movieList[position])
 
     override fun getItemCount(): Int = movieList.size
 
